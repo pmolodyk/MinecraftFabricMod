@@ -12,8 +12,8 @@ import net.minecraft.world.gen.feature.Feature;
 
 import java.util.Random;
 
-public class StoneSpiralFeature extends Feature<DefaultFeatureConfig> {
-    public StoneSpiralFeature(Codec<DefaultFeatureConfig> config) {
+public class BuildingFeature extends Feature<DefaultFeatureConfig> {
+    public BuildingFeature(Codec<DefaultFeatureConfig> config) {
         super(config);
     }
 

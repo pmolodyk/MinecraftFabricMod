@@ -15,8 +15,8 @@ import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 
-public class ExampleMod implements ModInitializer {
-	private static final Feature<DefaultFeatureConfig> STONE_SPIRAL = new StoneSpiralFeature(DefaultFeatureConfig.CODEC);
+public class BuildingsMod implements ModInitializer {
+	private static final Feature<DefaultFeatureConfig> STONE_SPIRAL = new BuildingFeature(DefaultFeatureConfig.CODEC);
 	public static final ConfiguredFeature<?, ?> STONE_SPIRAL_CONFIGURED = STONE_SPIRAL.configure(FeatureConfig.DEFAULT)
 			.decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(5)));
 
