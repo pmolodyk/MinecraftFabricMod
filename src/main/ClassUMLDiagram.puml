@@ -15,6 +15,14 @@ class BuildingFeature {
                                 DefaultFeatureConfig config)
 }
 
+class MinecraftConfig{
+    StructureWorldAccess world,
+    ChunkGenerator generator,
+    Random random,
+    BlockPos pos,
+    DefaultFeatureConfig config
+}
+
 class BuildingsMod {
     BuildingFeature feature
     void onInitialize()
@@ -26,8 +34,7 @@ abstract class HouseBuilder {
     CeilingGenerator ceilingGenerator
     String configFile
 
-    boolean build(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
-                                                  DefaultFeatureConfig config)
+    boolean build(MinecraftConfig mConfig)
 }
 
 class ModernHouseBuilder {
@@ -39,20 +46,17 @@ class MedievalHouseBuilder {
 class LayoutGenerator {
     String configFile
 
-    int[][] generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
-                                                               DefaultFeatureConfig config)
+    int[][] generate(MinecraftConfig mConfig)
 }
 
 class ExternalWallGenerator{
     String configFile
-    boolean generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
-                                                                       DefaultFeatureConfig config, int[][] layout)
+    boolean generate(MinecraftConfig mConfig, int[][] layout)
 }
 
 class CeilingGenerator{
     String configFile
-    boolean generator(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
-                                                                        DefaultFeatureConfig config)
+    boolean generator(MinecraftConfig mConfig)
 }
 
 ModInitializer <|.. BuildingsMod

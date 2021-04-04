@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor Player
+entity Minecraft
+
+Player -> Minecraft : Launches Game
+
+participant BuildingsMod
+
+Minecraft -> BuildingsMod : Loads mod Jar
+
+database MinecraftRegistry
+
+BuildingsMod -> MinecraftRegistry : Registers building feature
+
+Player -> Minecraft : Creates new world
+
+Minecraft -> MinecraftRegistry : Reads features
+MinecraftRegistry -> Minecraft : Returns BuildingsMod
+
+participant BuildingFeature
+
+Minecraft -> BuildingFeature : Calls generate(...)
+
+participant HouseBuilder
+
+BuildingFeature -> HouseBuilder : Calls build(...)
+
+participant LayoutGenerator
+participant ExternalWallGenerator
+participant CeilingGenerator
+
+HouseBuilder -> LayoutGenerator : Calls generate(...)
+HouseBuilder -> ExternalWallGenerator : Calls generate(...)
+HouseBuilder -> CeilingGenerator : Calls generate(...)
+
+HouseBuilder -> BuildingFeature : Returns build success
+BuildingFeature -> Minecraft : Return feature generation success
+Minecraft -> Player : Displays new world
+@enduml

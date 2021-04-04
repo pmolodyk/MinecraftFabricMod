@@ -1,17 +1,20 @@
 ### 1) BuildingsMod
 
 Ответственность: инициализировать все классы мода и сам мод во внутренней среде Minecraft.
-Связанные классы: BuildingFeature
+
+Сотрудничество: Создает объект класса BuildingFeature - подтипа Feature, который описывает генерацию зданий, и регистрирует их в системе Minecraft через стандартный объект ConfiguredFeature.
 
 ### 2) BuildingFeature
 
 Ответственность: делегирует генерацию дома строителю дома. 
-Связанные классы: HouseBuilder
+
+Сотрудничество: Упаковывает настройки Minecraft в объект класса MinecraftConfig и передает его в HouseBuilder.
 
 ### 3) HouseBuilder
 
 Ответственность: определяет структуру дома, "по частям собирает дом" и генерирует блоки, которые его составляют.
-Связанные классы: LayoutGenerator, ExternalWallGenerator, CeilingGenerator
+
+Сотрудничество: Загружает из файла настройки, специфичные для своего стиля. Последовательно запускает LayoutGenerator, ExternalWallGenerator и CeilingGenerator, которые создают структуру дома.
 
 ### 4) LayoutGenerator
 
