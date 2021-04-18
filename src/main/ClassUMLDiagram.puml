@@ -1,0 +1,75 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface ModInitializer {
+    void onInitialize()
+}
+
+class Feature
+
+class ConfiguredFeature
+
+class BuildingFeature {
+    HouseBuilder builder
+    boolean generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
+                                DefaultFeatureConfig config)
+}
+
+class MinecraftConfig{
+    StructureWorldAccess world,
+    ChunkGenerator generator,
+    Random random,
+    BlockPos pos,
+    DefaultFeatureConfig config
+}
+
+class BuildingsMod {
+    BuildingFeature feature
+    void onInitialize()
+}
+
+abstract class HouseBuilder {
+    LayoutGenerator layoutGenerator
+    ExternalWallGenerator externalWallGenerator
+    CeilingGenerator ceilingGenerator
+    String configFile
+
+    boolean build(MinecraftConfig mConfig)
+}
+
+class ModernHouseBuilder {
+}
+
+class MedievalHouseBuilder {
+}
+
+class LayoutGenerator {
+    String configFile
+
+    int[][] generate(MinecraftConfig mConfig)
+}
+
+class ExternalWallGenerator{
+    String configFile
+    boolean generate(MinecraftConfig mConfig, int[][] layout)
+}
+
+class CeilingGenerator{
+    String configFile
+    boolean generator(MinecraftConfig mConfig)
+}
+
+ModInitializer <|.. BuildingsMod
+Feature <|-- BuildingFeature
+BuildingsMod o-- BuildingFeature
+BuildingsMod o-- ConfiguredFeature
+BuildingFeature *-- HouseBuilder
+
+HouseBuilder <|-- ModernHouseBuilder
+HouseBuilder <|-- MedievalHouseBuilder
+
+HouseBuilder o-- LayoutGenerator
+HouseBuilder o-- ExternalWallGenerator
+HouseBuilder o-- CeilingGenerator
+
+@enduml

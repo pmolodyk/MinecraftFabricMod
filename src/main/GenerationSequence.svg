@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="600px" preserveAspectRatio="none" style="width:1438px;height:600px;" version="1.1" viewBox="0 0 1438 600" width="1438px" zoomAndPan="magnify"><defs><filter height="300%" id="f1l0idkyhmmd8x" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="30" x2="30" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="202.5" x2="202.5" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="331.5" x2="331.5" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="536.5" x2="536.5" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="677.5" x2="677.5" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="865" x2="865" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1017.5" x2="1017.5" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1187.5" x2="1187.5" y1="88.2969" y2="516.1563"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1358.5" x2="1358.5" y1="88.2969" y2="516.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="5" y="84.9951">Player</text><ellipse cx="30" cy="15" fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M30,23 L30,50 M17,31 L43,31 M30,50 L17,65 M30,50 L43,65 " fill="none" filter="url(#f1l0idkyhmmd8x)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="5" y="528.1514">Player</text><ellipse cx="30" cy="541.4531" fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M30,549.4531 L30,576.4531 M17,557.4531 L43,557.4531 M30,576.4531 L17,591.4531 M30,576.4531 L43,591.4531 " fill="none" filter="url(#f1l0idkyhmmd8x)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="166.5" y="84.9951">Minecraft</text><ellipse cx="203" cy="56" fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" rx="12" ry="12" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;" x1="191" x2="215" y1="70" y2="70"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="166.5" y="528.1514">Minecraft</text><ellipse cx="203" cy="547.4531" fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" rx="12" ry="12" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;" x1="191" x2="215" y1="561.4531" y2="561.4531"/><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="109" x="275.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="282.5" y="72.9951">BuildingsMod</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="109" x="275.5" y="515.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="282.5" y="535.1514">BuildingsMod</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="471.5" y="84.9951">MinecraftRegistry</text><path d="M519,36 C519,26 537,26 537,26 C537,26 555,26 555,36 L555,62 C555,72 537,72 537,72 C537,72 519,72 519,62 L519,36 " fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" style="stroke:#000000;stroke-width:1.5;"/><path d="M519,36 C519,46 537,46 537,46 C537,46 555,46 555,36 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="471.5" y="528.1514">MinecraftRegistry</text><path d="M519,541.4531 C519,531.4531 537,531.4531 537,531.4531 C537,531.4531 555,531.4531 555,541.4531 L555,567.4531 C555,577.4531 537,577.4531 537,577.4531 C537,577.4531 519,577.4531 519,567.4531 L519,541.4531 " fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" style="stroke:#000000;stroke-width:1.5;"/><path d="M519,541.4531 C519,551.4531 537,551.4531 537,551.4531 C537,551.4531 555,551.4531 555,541.4531 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="127" x="612.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="619.5" y="72.9951">BuildingFeature</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="127" x="612.5" y="515.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="619.5" y="535.1514">BuildingFeature</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="110" x="808" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="815" y="72.9951">HouseBuilder</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="110" x="808" y="515.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="815" y="535.1514">HouseBuilder</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="135" x="948.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="955.5" y="72.9951">LayoutGenerator</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="135" x="948.5" y="515.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="955.5" y="535.1514">LayoutGenerator</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="177" x="1097.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="1104.5" y="72.9951">ExternalWallGenerator</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="177" x="1097.5" y="515.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="1104.5" y="535.1514">ExternalWallGenerator</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="136" x="1288.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="1295.5" y="72.9951">CeilingGenerator</text><rect fill="#FEFECE" filter="url(#f1l0idkyhmmd8x)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="136" x="1288.5" y="515.1563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="1295.5" y="535.1514">CeilingGenerator</text><polygon fill="#A80036" points="191,115.4297,201,119.4297,191,123.4297,195,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="30" x2="197" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="37" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="50" y="114.3638">Launches Game</text><polygon fill="#A80036" points="320,144.5625,330,148.5625,320,152.5625,324,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="203" x2="326" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="210" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="223" y="143.4966">Loads mod Jar</text><polygon fill="#A80036" points="525,173.6953,535,177.6953,525,181.6953,529,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="332" x2="531" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="339" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="352" y="172.6294">Registers building feature</text><polygon fill="#A80036" points="191,202.8281,201,206.8281,191,210.8281,195,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="30" x2="197" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="37" y="201.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="50" y="201.7622">Creates new world</text><polygon fill="#A80036" points="525,231.9609,535,235.9609,525,239.9609,529,235.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="203" x2="531" y1="235.9609" y2="235.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="210" y="230.895">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="223" y="230.895">Reads features</text><polygon fill="#A80036" points="214,261.0938,204,265.0938,214,269.0938,210,265.0938" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="208" x2="536" y1="265.0938" y2="265.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="220" y="260.0278">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="233" y="260.0278">Returns BuildingsMod</text><polygon fill="#A80036" points="666,290.2266,676,294.2266,666,298.2266,670,294.2266" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="203" x2="672" y1="294.2266" y2="294.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="210" y="289.1606">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="223" y="289.1606">Calls generate(...)</text><polygon fill="#A80036" points="853,319.3594,863,323.3594,853,327.3594,857,323.3594" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="678" x2="859" y1="323.3594" y2="323.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="685" y="318.2935">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="698" y="318.2935">Calls build(...)</text><polygon fill="#A80036" points="1006,348.4922,1016,352.4922,1006,356.4922,1010,352.4922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="865" x2="1012" y1="352.4922" y2="352.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="872" y="347.4263">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="885" y="347.4263">Calls generate(...)</text><polygon fill="#A80036" points="1176,377.625,1186,381.625,1176,385.625,1180,381.625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="865" x2="1182" y1="381.625" y2="381.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="872" y="376.5591">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="894" y="376.5591">Calls generate(...)</text><polygon fill="#A80036" points="1346.5,406.7578,1356.5,410.7578,1346.5,414.7578,1350.5,410.7578" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="865" x2="1352.5" y1="410.7578" y2="410.7578"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="872" y="405.6919">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="894" y="405.6919">Calls generate(...)</text><polygon fill="#A80036" points="689,435.8906,679,439.8906,689,443.8906,685,439.8906" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="683" x2="864" y1="439.8906" y2="439.8906"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="695" y="434.8247">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="717" y="434.8247">Returns build success</text><polygon fill="#A80036" points="214,465.0234,204,469.0234,214,473.0234,210,469.0234" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="208" x2="677" y1="469.0234" y2="469.0234"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="220" y="463.9575">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="223" x="242" y="463.9575">Return feature generation success</text><polygon fill="#A80036" points="41,494.1563,31,498.1563,41,502.1563,37,498.1563" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="35" x2="202" y1="498.1563" y2="498.1563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="47" y="493.0903">14</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="69" y="493.0903">Displays new world</text><!--MD5=[be4f00828040daeea9911cbd31930257]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor Player
+entity Minecraft
+
+Player -> Minecraft : Launches Game
+
+participant BuildingsMod
+
+Minecraft -> BuildingsMod : Loads mod Jar
+
+database MinecraftRegistry
+
+BuildingsMod -> MinecraftRegistry : Registers building feature
+
+Player -> Minecraft : Creates new world
+
+Minecraft -> MinecraftRegistry : Reads features
+MinecraftRegistry -> Minecraft : Returns BuildingsMod
+
+participant BuildingFeature
+
+Minecraft -> BuildingFeature : Calls generate(...)
+
+participant HouseBuilder
+
+BuildingFeature -> HouseBuilder : Calls build(...)
+
+participant LayoutGenerator
+participant ExternalWallGenerator
+participant CeilingGenerator
+
+HouseBuilder -> LayoutGenerator : Calls generate(...)
+HouseBuilder -> ExternalWallGenerator : Calls generate(...)
+HouseBuilder -> CeilingGenerator : Calls generate(...)
+
+HouseBuilder -> BuildingFeature : Returns build success
+BuildingFeature -> Minecraft : Return feature generation success
+Minecraft -> Player : Displays new world
+@enduml
+
+@startuml
+
+autonumber
+
+actor Player
+entity Minecraft
+
+Player -> Minecraft : Launches Game
+
+participant BuildingsMod
+
+Minecraft -> BuildingsMod : Loads mod Jar
+
+database MinecraftRegistry
+
+BuildingsMod -> MinecraftRegistry : Registers building feature
+
+Player -> Minecraft : Creates new world
+
+Minecraft -> MinecraftRegistry : Reads features
+MinecraftRegistry -> Minecraft : Returns BuildingsMod
+
+participant BuildingFeature
+
+Minecraft -> BuildingFeature : Calls generate(...)
+
+participant HouseBuilder
+
+BuildingFeature -> HouseBuilder : Calls build(...)
+
+participant LayoutGenerator
+participant ExternalWallGenerator
+participant CeilingGenerator
+
+HouseBuilder -> LayoutGenerator : Calls generate(...)
+HouseBuilder -> ExternalWallGenerator : Calls generate(...)
+HouseBuilder -> CeilingGenerator : Calls generate(...)
+
+HouseBuilder -> BuildingFeature : Returns build success
+BuildingFeature -> Minecraft : Return feature generation success
+Minecraft -> Player : Displays new world
+@enduml
+
+PlantUML version 1.2021.2(Sun Mar 07 14:10:27 MSK 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

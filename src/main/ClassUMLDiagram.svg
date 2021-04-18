@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="718px" preserveAspectRatio="none" style="width:1325px;height:718px;" version="1.1" viewBox="0 0 1325 718" width="1325px" zoomAndPan="magnify"><defs><filter height="300%" id="fdblmjhq53jjv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[5ed7b06c433d589470546d9c381474d1]
+class ModInitializer--><rect codeLine="3" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="60.8047" id="ModInitializer" style="stroke:#A80036;stroke-width:1.5;" width="111" x="180.5" y="32.5"/><ellipse cx="195.5" cy="48.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M191.9219,44.2813 L191.9219,42 L199.3125,42 L199.3125,44.2813 L196.8438,44.2813 L196.8438,52.7344 L199.3125,52.7344 L199.3125,55 L191.9219,55 L191.9219,52.7344 L194.3906,52.7344 L194.3906,44.2813 L191.9219,44.2813 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="209.5" y="52.6543">ModInitializer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="181.5" x2="290.5" y1="64.5" y2="64.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="181.5" x2="290.5" y1="72.5" y2="72.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="186.5" y="86.7104">void onInitialize()</text><!--MD5=[82c53a10f238a1092cf5f0b044477708]
+class Feature--><rect codeLine="7" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="48" id="Feature" style="stroke:#A80036;stroke-width:1.5;" width="78" x="480" y="192"/><ellipse cx="495" cy="208" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M497.4688,213.875 Q496.8906,214.1875 496.25,214.3438 Q495.6094,214.5 494.9063,214.5 Q492.4063,214.5 491.0781,212.8281 Q489.7656,211.1563 489.7656,208 Q489.7656,204.8438 491.0781,203.1719 Q492.4063,201.5 494.9063,201.5 Q495.6094,201.5 496.25,201.6563 Q496.9063,201.8125 497.4688,202.125 L497.4688,204.9219 Q496.8438,204.3594 496.25,204.0938 Q495.6563,203.8125 495.0313,203.8125 Q493.6875,203.8125 493,204.875 Q492.3125,205.9375 492.3125,208 Q492.3125,210.0781 493,211.1406 Q493.6875,212.1875 495.0313,212.1875 Q495.6563,212.1875 496.25,211.9219 Q496.8438,211.6563 497.4688,211.0781 L497.4688,213.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46" x="509" y="212.1543">Feature</text><line style="stroke:#A80036;stroke-width:1.5;" x1="481" x2="557" y1="224" y2="224"/><line style="stroke:#A80036;stroke-width:1.5;" x1="481" x2="557" y1="232" y2="232"/><!--MD5=[7f46fd43c1cf8eb25727fd4718503767]
+class ConfiguredFeature--><rect codeLine="9" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="48" id="ConfiguredFeature" style="stroke:#A80036;stroke-width:1.5;" width="144" x="27" y="332"/><ellipse cx="42" cy="348" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M44.4688,353.875 Q43.8906,354.1875 43.25,354.3438 Q42.6094,354.5 41.9063,354.5 Q39.4063,354.5 38.0781,352.8281 Q36.7656,351.1563 36.7656,348 Q36.7656,344.8438 38.0781,343.1719 Q39.4063,341.5 41.9063,341.5 Q42.6094,341.5 43.25,341.6563 Q43.9063,341.8125 44.4688,342.125 L44.4688,344.9219 Q43.8438,344.3594 43.25,344.0938 Q42.6563,343.8125 42.0313,343.8125 Q40.6875,343.8125 40,344.875 Q39.3125,345.9375 39.3125,348 Q39.3125,350.0781 40,351.1406 Q40.6875,352.1875 42.0313,352.1875 Q42.6563,352.1875 43.25,351.9219 Q43.8438,351.6563 44.4688,351.0781 L44.4688,353.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="112" x="56" y="352.1543">ConfiguredFeature</text><line style="stroke:#A80036;stroke-width:1.5;" x1="28" x2="170" y1="364" y2="364"/><line style="stroke:#A80036;stroke-width:1.5;" x1="28" x2="170" y1="372" y2="372"/><!--MD5=[61d6aced5d8f8185bdacb6ed78fde38d]
+class BuildingFeature--><rect codeLine="11" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="86.4141" id="BuildingFeature" style="stroke:#A80036;stroke-width:1.5;" width="625" x="206.5" y="313"/><ellipse cx="467.25" cy="329" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M469.7188,334.875 Q469.1406,335.1875 468.5,335.3438 Q467.8594,335.5 467.1563,335.5 Q464.6563,335.5 463.3281,333.8281 Q462.0156,332.1563 462.0156,329 Q462.0156,325.8438 463.3281,324.1719 Q464.6563,322.5 467.1563,322.5 Q467.8594,322.5 468.5,322.6563 Q469.1563,322.8125 469.7188,323.125 L469.7188,325.9219 Q469.0938,325.3594 468.5,325.0938 Q467.9063,324.8125 467.2813,324.8125 Q465.9375,324.8125 465.25,325.875 Q464.5625,326.9375 464.5625,329 Q464.5625,331.0781 465.25,332.1406 Q465.9375,333.1875 467.2813,333.1875 Q467.9063,333.1875 468.5,332.9219 Q469.0938,332.6563 469.7188,332.0781 L469.7188,334.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="95" x="487.75" y="333.1543">BuildingFeature</text><line style="stroke:#A80036;stroke-width:1.5;" x1="207.5" x2="830.5" y1="345" y2="345"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="212.5" y="359.2104">HouseBuilder builder</text><line style="stroke:#A80036;stroke-width:1.5;" x1="207.5" x2="830.5" y1="365.8047" y2="365.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="613" x="212.5" y="380.0151">boolean generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="161" x="212.5" y="392.8198">DefaultFeatureConfig config)</text><!--MD5=[9a8f6e05c20f2d603129f08154b514a9]
+class MinecraftConfig--><rect codeLine="17" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="112.0234" id="MinecraftConfig" style="stroke:#A80036;stroke-width:1.5;" width="175" x="326.5" y="7"/><ellipse cx="363.55" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M366.0188,28.875 Q365.4406,29.1875 364.8,29.3438 Q364.1594,29.5 363.4563,29.5 Q360.9563,29.5 359.6281,27.8281 Q358.3156,26.1563 358.3156,23 Q358.3156,19.8438 359.6281,18.1719 Q360.9563,16.5 363.4563,16.5 Q364.1594,16.5 364.8,16.6563 Q365.4563,16.8125 366.0188,17.125 L366.0188,19.9219 Q365.3938,19.3594 364.8,19.0938 Q364.2063,18.8125 363.5813,18.8125 Q362.2375,18.8125 361.55,19.875 Q360.8625,20.9375 360.8625,23 Q360.8625,25.0781 361.55,26.1406 Q362.2375,27.1875 363.5813,27.1875 Q364.2063,27.1875 364.8,26.9219 Q365.3938,26.6563 366.0188,26.0781 L366.0188,28.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="382.45" y="27.1543">MinecraftConfig</text><line style="stroke:#A80036;stroke-width:1.5;" x1="327.5" x2="500.5" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="163" x="332.5" y="53.2104">StructureWorldAccess world,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="332.5" y="66.0151">ChunkGenerator generator,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="332.5" y="78.8198">Random random,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="332.5" y="91.6245">BlockPos pos,</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="332.5" y="104.4292">DefaultFeatureConfig config</text><line style="stroke:#A80036;stroke-width:1.5;" x1="327.5" x2="500.5" y1="111.0234" y2="111.0234"/><!--MD5=[8e53eeb09088e55a7a9032e1f3c9fd4c]
+class BuildingsMod--><rect codeLine="25" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="73.6094" id="BuildingsMod" style="stroke:#A80036;stroke-width:1.5;" width="145" x="163.5" y="179"/><ellipse cx="193.35" cy="195" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M195.8188,200.875 Q195.2406,201.1875 194.6,201.3438 Q193.9594,201.5 193.2563,201.5 Q190.7563,201.5 189.4281,199.8281 Q188.1156,198.1563 188.1156,195 Q188.1156,191.8438 189.4281,190.1719 Q190.7563,188.5 193.2563,188.5 Q193.9594,188.5 194.6,188.6563 Q195.2563,188.8125 195.8188,189.125 L195.8188,191.9219 Q195.1938,191.3594 194.6,191.0938 Q194.0063,190.8125 193.3813,190.8125 Q192.0375,190.8125 191.35,191.875 Q190.6625,192.9375 190.6625,195 Q190.6625,197.0781 191.35,198.1406 Q192.0375,199.1875 193.3813,199.1875 Q194.0063,199.1875 194.6,198.9219 Q195.1938,198.6563 195.8188,198.0781 L195.8188,200.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="80" x="210.65" y="199.1543">BuildingsMod</text><line style="stroke:#A80036;stroke-width:1.5;" x1="164.5" x2="307.5" y1="211" y2="211"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="169.5" y="225.2104">BuildingFeature feature</text><line style="stroke:#A80036;stroke-width:1.5;" x1="164.5" x2="307.5" y1="231.8047" y2="231.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="169.5" y="246.0151">void onInitialize()</text><!--MD5=[ade28e922f8fd3dfc1722f8c9f276c2e]
+class HouseBuilder--><rect codeLine="30" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="112.0234" id="HouseBuilder" style="stroke:#A80036;stroke-width:1.5;" width="274" x="382" y="459"/><ellipse cx="475.25" cy="475" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M475.3594,470.2969 L474.2031,475.625 L476.5313,475.625 L475.3594,470.2969 Z M473.875,467.75 L476.8594,467.75 L480.2188,480.75 L477.7656,480.75 L477,477.75 L473.7188,477.75 L472.9688,480.75 L470.5313,480.75 L473.875,467.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="495.75" y="479.1543">HouseBuilder</text><line style="stroke:#A80036;stroke-width:1.5;" x1="383" x2="655" y1="491" y2="491"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="388" y="505.2104">LayoutGenerator layoutGenerator</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="262" x="388" y="518.0151">ExternalWallGenerator externalWallGenerator</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="194" x="388" y="530.8198">CeilingGenerator ceilingGenerator</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="388" y="543.6245">String configFile</text><line style="stroke:#A80036;stroke-width:1.5;" x1="383" x2="655" y1="550.2188" y2="550.2188"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="223" x="388" y="564.4292">boolean build(MinecraftConfig mConfig)</text><!--MD5=[f90898f18fa37540d769177dd8cf31b6]
+class ModernHouseBuilder--><rect codeLine="39" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="48" id="ModernHouseBuilder" style="stroke:#A80036;stroke-width:1.5;" width="156" x="7" y="644"/><ellipse cx="22" cy="660" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M24.4688,665.875 Q23.8906,666.1875 23.25,666.3438 Q22.6094,666.5 21.9063,666.5 Q19.4063,666.5 18.0781,664.8281 Q16.7656,663.1563 16.7656,660 Q16.7656,656.8438 18.0781,655.1719 Q19.4063,653.5 21.9063,653.5 Q22.6094,653.5 23.25,653.6563 Q23.9063,653.8125 24.4688,654.125 L24.4688,656.9219 Q23.8438,656.3594 23.25,656.0938 Q22.6563,655.8125 22.0313,655.8125 Q20.6875,655.8125 20,656.875 Q19.3125,657.9375 19.3125,660 Q19.3125,662.0781 20,663.1406 Q20.6875,664.1875 22.0313,664.1875 Q22.6563,664.1875 23.25,663.9219 Q23.8438,663.6563 24.4688,663.0781 L24.4688,665.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="124" x="36" y="664.1543">ModernHouseBuilder</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="162" y1="676" y2="676"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="162" y1="684" y2="684"/><!--MD5=[2dd139d2997ce15db48e7fd203873bab]
+class MedievalHouseBuilder--><rect codeLine="42" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="48" id="MedievalHouseBuilder" style="stroke:#A80036;stroke-width:1.5;" width="163" x="198.5" y="644"/><ellipse cx="213.5" cy="660" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M215.9688,665.875 Q215.3906,666.1875 214.75,666.3438 Q214.1094,666.5 213.4063,666.5 Q210.9063,666.5 209.5781,664.8281 Q208.2656,663.1563 208.2656,660 Q208.2656,656.8438 209.5781,655.1719 Q210.9063,653.5 213.4063,653.5 Q214.1094,653.5 214.75,653.6563 Q215.4063,653.8125 215.9688,654.125 L215.9688,656.9219 Q215.3438,656.3594 214.75,656.0938 Q214.1563,655.8125 213.5313,655.8125 Q212.1875,655.8125 211.5,656.875 Q210.8125,657.9375 210.8125,660 Q210.8125,662.0781 211.5,663.1406 Q212.1875,664.1875 213.5313,664.1875 Q214.1563,664.1875 214.75,663.9219 Q215.3438,663.6563 215.9688,663.0781 L215.9688,665.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="131" x="227.5" y="664.1543">MedievalHouseBuilder</text><line style="stroke:#A80036;stroke-width:1.5;" x1="199.5" x2="360.5" y1="676" y2="676"/><line style="stroke:#A80036;stroke-width:1.5;" x1="199.5" x2="360.5" y1="684" y2="684"/><!--MD5=[11c05185d20ffe14cc7e53008090114f]
+class LayoutGenerator--><rect codeLine="45" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="73.6094" id="LayoutGenerator" style="stroke:#A80036;stroke-width:1.5;" width="244" x="397" y="631"/><ellipse cx="464.25" cy="647" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M466.7188,652.875 Q466.1406,653.1875 465.5,653.3438 Q464.8594,653.5 464.1563,653.5 Q461.6563,653.5 460.3281,651.8281 Q459.0156,650.1563 459.0156,647 Q459.0156,643.8438 460.3281,642.1719 Q461.6563,640.5 464.1563,640.5 Q464.8594,640.5 465.5,640.6563 Q466.1563,640.8125 466.7188,641.125 L466.7188,643.9219 Q466.0938,643.3594 465.5,643.0938 Q464.9063,642.8125 464.2813,642.8125 Q462.9375,642.8125 462.25,643.875 Q461.5625,644.9375 461.5625,647 Q461.5625,649.0781 462.25,650.1406 Q462.9375,651.1875 464.2813,651.1875 Q464.9063,651.1875 465.5,650.9219 Q466.0938,650.6563 466.7188,650.0781 L466.7188,652.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="484.75" y="651.1543">LayoutGenerator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="398" x2="640" y1="663" y2="663"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="403" y="677.2104">String configFile</text><line style="stroke:#A80036;stroke-width:1.5;" x1="398" x2="640" y1="683.8047" y2="683.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="232" x="403" y="698.0151">int[][] generate(MinecraftConfig mConfig)</text><!--MD5=[b6a57f790521b6ec5a900ccadeee05d2]
+class ExternalWallGenerator--><rect codeLine="51" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="73.6094" id="ExternalWallGenerator" style="stroke:#A80036;stroke-width:1.5;" width="336" x="676" y="631"/><ellipse cx="772.25" cy="647" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M774.7188,652.875 Q774.1406,653.1875 773.5,653.3438 Q772.8594,653.5 772.1563,653.5 Q769.6563,653.5 768.3281,651.8281 Q767.0156,650.1563 767.0156,647 Q767.0156,643.8438 768.3281,642.1719 Q769.6563,640.5 772.1563,640.5 Q772.8594,640.5 773.5,640.6563 Q774.1563,640.8125 774.7188,641.125 L774.7188,643.9219 Q774.0938,643.3594 773.5,643.0938 Q772.9063,642.8125 772.2813,642.8125 Q770.9375,642.8125 770.25,643.875 Q769.5625,644.9375 769.5625,647 Q769.5625,649.0781 770.25,650.1406 Q770.9375,651.1875 772.2813,651.1875 Q772.9063,651.1875 773.5,650.9219 Q774.0938,650.6563 774.7188,650.0781 L774.7188,652.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="135" x="792.75" y="651.1543">ExternalWallGenerator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="677" x2="1011" y1="663" y2="663"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="682" y="677.2104">String configFile</text><line style="stroke:#A80036;stroke-width:1.5;" x1="677" x2="1011" y1="683.8047" y2="683.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="324" x="682" y="698.0151">boolean generate(MinecraftConfig mConfig, int[][] layout)</text><!--MD5=[31c8ed7694c13ed0f019e078a41caee0]
+class CeilingGenerator--><rect codeLine="56" fill="#FEFECE" filter="url(#fdblmjhq53jjv)" height="73.6094" id="CeilingGenerator" style="stroke:#A80036;stroke-width:1.5;" width="264" x="1047" y="631"/><ellipse cx="1124.75" cy="647" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1127.2188,652.875 Q1126.6406,653.1875 1126,653.3438 Q1125.3594,653.5 1124.6563,653.5 Q1122.1563,653.5 1120.8281,651.8281 Q1119.5156,650.1563 1119.5156,647 Q1119.5156,643.8438 1120.8281,642.1719 Q1122.1563,640.5 1124.6563,640.5 Q1125.3594,640.5 1126,640.6563 Q1126.6563,640.8125 1127.2188,641.125 L1127.2188,643.9219 Q1126.5938,643.3594 1126,643.0938 Q1125.4063,642.8125 1124.7813,642.8125 Q1123.4375,642.8125 1122.75,643.875 Q1122.0625,644.9375 1122.0625,647 Q1122.0625,649.0781 1122.75,650.1406 Q1123.4375,651.1875 1124.7813,651.1875 Q1125.4063,651.1875 1126,650.9219 Q1126.5938,650.6563 1127.2188,650.0781 L1127.2188,652.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="100" x="1145.25" y="651.1543">CeilingGenerator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1048" x2="1310" y1="663" y2="663"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="1053" y="677.2104">String configFile</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1048" x2="1310" y1="683.8047" y2="683.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="252" x="1053" y="698.0151">boolean generator(MinecraftConfig mConfig)</text><!--MD5=[f3ee2aaf769aa56a7c9f8ce70679a564]
+reverse link ModInitializer to BuildingsMod--><path codeLine="61" d="M236,114.09 C236,135.26 236,159.45 236,178.84 " fill="none" id="ModInitializer-backto-BuildingsMod" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="229,113.83,236,93.83,243,113.83,229,113.83" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7cb36f952e985409cea43b72bf415ebe]
+reverse link Feature to BuildingFeature--><path codeLine="62" d="M519,260.36 C519,277.11 519,296.2 519,312.84 " fill="none" id="Feature-backto-BuildingFeature" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="512,260.1,519,240.1,526,260.1,512,260.1" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d93809618595a2e59b6e5e2998a19976]
+reverse link BuildingsMod to BuildingFeature--><path codeLine="63" d="M320.32,258.12 C355.83,275.43 397.12,295.57 432.83,312.98 " fill="none" id="BuildingsMod-backto-BuildingFeature" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="308.51,252.36,312.1491,258.5855,319.2953,257.6208,315.6563,251.3953,308.51,252.36" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[da7590127b4be80e9105ad187278e401]
+reverse link BuildingsMod to ConfiguredFeature--><path codeLine="64" d="M190.73,262.6 C167.65,285.84 140.59,313.1 121.87,331.96 " fill="none" id="BuildingsMod-backto-ConfiguredFeature" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="200,253.26,192.9334,254.6962,191.5412,261.7716,198.6078,260.3354,200,253.26" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7b7cc4504465410f94ee8a337f8c6c76]
+reverse link BuildingFeature to HouseBuilder--><path codeLine="65" d="M519,412.46 C519,427.5 519,443.78 519,458.8 " fill="none" id="BuildingFeature-backto-HouseBuilder" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="519,399.07,515,405.07,519,411.07,523,405.07,519,399.07" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[dfa04dadba879a42470b48b12c071134]
+reverse link HouseBuilder to ModernHouseBuilder--><path codeLine="67" d="M362.66,568.07 C305.38,587.45 240.12,609.86 181,631 C169.52,635.1 157.31,639.59 145.58,643.96 " fill="none" id="HouseBuilder-backto-ModernHouseBuilder" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="360.57,561.39,381.76,561.63,365.05,574.66,360.57,561.39" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[21f25f0f6bc6f285ffbb8ba4f824aee8]
+reverse link HouseBuilder to MedievalHouseBuilder--><path codeLine="68" d="M414.69,581.91 C379.63,604.06 342.79,627.33 316.53,643.92 " fill="none" id="HouseBuilder-backto-MedievalHouseBuilder" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="411.05,575.92,431.7,571.16,418.53,587.76,411.05,575.92" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[71bd0f2147f761fbda9dec107f4e6e49]
+reverse link HouseBuilder to LayoutGenerator--><path codeLine="70" d="M519,584.63 C519,600.61 519,617 519,630.91 " fill="none" id="HouseBuilder-backto-LayoutGenerator" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="519,571.37,515,577.37,519,583.37,523,577.37,519,571.37" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2dde6da388e26fd75dce5a1dbea32ef1]
+reverse link HouseBuilder to ExternalWallGenerator--><path codeLine="71" d="M649.6,576.68 C689.09,595.03 731.2,614.59 766.1,630.81 " fill="none" id="HouseBuilder-backto-ExternalWallGenerator" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="637.71,571.16,641.4617,577.3183,648.5892,576.2238,644.8376,570.0655,637.71,571.16" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[32f73d2a74efd297cdce569b0244d674]
+reverse link HouseBuilder to CeilingGenerator--><path codeLine="72" d="M668.92,549.09 C770.83,571.74 908.67,602.69 1030,631 C1035.44,632.27 1040.99,633.57 1046.6,634.9 " fill="none" id="HouseBuilder-backto-CeilingGenerator" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="656.04,546.23,661.0313,551.4345,667.7552,548.829,662.7639,543.6244,656.04,546.23" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1967ce84c69922d4b0f95308cdf1f064]
+@startuml
+'https://plantuml.com/class-diagram
+
+interface ModInitializer {
+    void onInitialize()
+}
+
+class Feature
+
+class ConfiguredFeature
+
+class BuildingFeature {
+    HouseBuilder builder
+    boolean generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
+                                DefaultFeatureConfig config)
+}
+
+class MinecraftConfig{
+    StructureWorldAccess world,
+    ChunkGenerator generator,
+    Random random,
+    BlockPos pos,
+    DefaultFeatureConfig config
+}
+
+class BuildingsMod {
+    BuildingFeature feature
+    void onInitialize()
+}
+
+abstract class HouseBuilder {
+    LayoutGenerator layoutGenerator
+    ExternalWallGenerator externalWallGenerator
+    CeilingGenerator ceilingGenerator
+    String configFile
+
+    boolean build(MinecraftConfig mConfig)
+}
+
+class ModernHouseBuilder {
+}
+
+class MedievalHouseBuilder {
+}
+
+class LayoutGenerator {
+    String configFile
+
+    int[][] generate(MinecraftConfig mConfig)
+}
+
+class ExternalWallGenerator{
+    String configFile
+    boolean generate(MinecraftConfig mConfig, int[][] layout)
+}
+
+class CeilingGenerator{
+    String configFile
+    boolean generator(MinecraftConfig mConfig)
+}
+
+ModInitializer <|.. BuildingsMod
+Feature <|- - BuildingFeature
+BuildingsMod o- - BuildingFeature
+BuildingsMod o- - ConfiguredFeature
+BuildingFeature *- - HouseBuilder
+
+HouseBuilder <|- - ModernHouseBuilder
+HouseBuilder <|- - MedievalHouseBuilder
+
+HouseBuilder o- - LayoutGenerator
+HouseBuilder o- - ExternalWallGenerator
+HouseBuilder o- - CeilingGenerator
+
+@enduml
+
+@startuml
+
+interface ModInitializer {
+    void onInitialize()
+}
+
+class Feature
+
+class ConfiguredFeature
+
+class BuildingFeature {
+    HouseBuilder builder
+    boolean generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
+                                DefaultFeatureConfig config)
+}
+
+class MinecraftConfig{
+    StructureWorldAccess world,
+    ChunkGenerator generator,
+    Random random,
+    BlockPos pos,
+    DefaultFeatureConfig config
+}
+
+class BuildingsMod {
+    BuildingFeature feature
+    void onInitialize()
+}
+
+abstract class HouseBuilder {
+    LayoutGenerator layoutGenerator
+    ExternalWallGenerator externalWallGenerator
+    CeilingGenerator ceilingGenerator
+    String configFile
+
+    boolean build(MinecraftConfig mConfig)
+}
+
+class ModernHouseBuilder {
+}
+
+class MedievalHouseBuilder {
+}
+
+class LayoutGenerator {
+    String configFile
+
+    int[][] generate(MinecraftConfig mConfig)
+}
+
+class ExternalWallGenerator{
+    String configFile
+    boolean generate(MinecraftConfig mConfig, int[][] layout)
+}
+
+class CeilingGenerator{
+    String configFile
+    boolean generator(MinecraftConfig mConfig)
+}
+
+ModInitializer <|.. BuildingsMod
+Feature <|- - BuildingFeature
+BuildingsMod o- - BuildingFeature
+BuildingsMod o- - ConfiguredFeature
+BuildingFeature *- - HouseBuilder
+
+HouseBuilder <|- - ModernHouseBuilder
+HouseBuilder <|- - MedievalHouseBuilder
+
+HouseBuilder o- - LayoutGenerator
+HouseBuilder o- - ExternalWallGenerator
+HouseBuilder o- - CeilingGenerator
+
+@enduml
+
+PlantUML version 1.2021.2(Sun Mar 07 14:10:27 MSK 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
