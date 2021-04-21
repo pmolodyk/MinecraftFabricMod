@@ -6,7 +6,21 @@ public abstract class HouseBuilder {
     CeilingGenerator ceilingGenerator;
     String configFile;
 
+    HouseBuilder() {
+        this.layoutGenerator = new LayoutGenerator();
+        this.externalWallGenerator = new ExternalWallGenerator();
+        this.ceilingGenerator = new CeilingGenerator();
+        this.configFile = null;
+    }
     boolean build(MinecraftConfig minecraftConfig) {
-        return true;
+        int[][] layout = layoutGenerator.generate(minecraftConfig);
+        if (layout == null) {
+            throw new NullPointerException();
+        }
+        int wallHeight = externalWallGenerator.generate(minecraftConfig, layout);
+        if (wallHeight == -1) {
+            throw new IllegalStateException();
+        }
+        return ceilingGenerator.generate(minecraftConfig, layout, wallHeight);
     }
 }
