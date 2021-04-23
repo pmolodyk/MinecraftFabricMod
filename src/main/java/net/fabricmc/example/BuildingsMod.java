@@ -17,7 +17,7 @@ import net.minecraft.world.gen.feature.FeatureConfig;
 
 public class BuildingsMod implements ModInitializer {
 	private static final Feature<DefaultFeatureConfig> BUILDING_FEATURE = new BuildingFeature(DefaultFeatureConfig.CODEC);
-	public static final ConfiguredFeature<?, ?> BUILDING_CONFIGURED = BUILDING_FEATURE.configure(FeatureConfig.DEFAULT).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(5)));
+	public static final ConfiguredFeature<?, ?> BUILDING_CONFIGURED = BUILDING_FEATURE.configure(FeatureConfig.DEFAULT).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(60)));
 
 	@Override
 	public void onInitialize() {
