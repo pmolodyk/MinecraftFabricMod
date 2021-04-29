@@ -13,21 +13,17 @@ import net.minecraft.world.gen.feature.Feature;
 import java.util.Random;
 
 public class BuildingFeature extends Feature<DefaultFeatureConfig> {
+    private HouseBuilder houseBuilder;
     public BuildingFeature(Codec<DefaultFeatureConfig> config) {
         super(config);
+        houseBuilder = new ModernHouseBuilder();
     }
 
     @Override
     public boolean generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
                             DefaultFeatureConfig config) {
-        BlockPos topPos = world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos);
-        Direction offset = Direction.NORTH;
-
-        for (int y = 1; y <= 15; y++) {
-            offset = offset.rotateYClockwise();
-            world.setBlockState(topPos.up(y).offset(offset), Blocks.STONE.getDefaultState(), 3);
-        }
-
-        return true;
+        MinecraftConfig minecraftConfig = new MinecraftConfig(world, generator, random,
+                world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos), config);
+        return houseBuilder.build(minecraftConfig);
     }
 }

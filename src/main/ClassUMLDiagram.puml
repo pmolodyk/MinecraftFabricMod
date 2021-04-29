@@ -56,7 +56,7 @@ class ExternalWallGenerator{
 
 class CeilingGenerator{
     String configFile
-    boolean generator(MinecraftConfig mConfig)
+    boolean generator(MinecraftConfig mConfig, int[][] layout)
 }
 
 ModInitializer <|.. BuildingsMod
