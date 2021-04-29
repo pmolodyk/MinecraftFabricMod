@@ -18,8 +18,14 @@ public class BuildingFeature extends Feature<DefaultFeatureConfig> {
 
   public BuildingFeature(Codec<DefaultFeatureConfig> config) {
     super(config);
-    houseBuilder = new ModernHouseBuilder(
-        "{\"wall_block_type\": \"whiteConcreate\",\"ceiling_block_type\": \"whiteConcreate\",\"layout_type\": \"rectangle\",}");
+   /* if (((int)((Math.random() * (3 - 1)) + 1)) == 1) {
+      houseBuilder = new MedievalHouseBuilder(
+          "{\"wall_block_type\": \"cobblestone\",\"ceiling_block_type\": \"cobblestone\",\"layout_type\": \"square\",}");
+    } else {
+      houseBuilder = new ModernHouseBuilder(
+          "{\"wall_block_type\": \"whiteConcreate\",\"ceiling_block_type\": \"whiteConcreate\",\"layout_type\": \"rectangle\",}");
+
+    }*/
   }
 
   @Override
@@ -28,15 +34,14 @@ public class BuildingFeature extends Feature<DefaultFeatureConfig> {
       DefaultFeatureConfig config) {
     MinecraftConfig minecraftConfig = new MinecraftConfig(world, generator, random,
         world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos), config);
+    if (((int)((Math.random() * (3 - 1)) + 1)) == 1) {
+      houseBuilder = new MedievalHouseBuilder(
+          "{\"wall_block_type\": \"cobblestone\",\"ceiling_block_type\": \"cobblestone\",\"layout_type\": \"square\",}");
+    } else {
+      houseBuilder = new ModernHouseBuilder(
+          "{\"wall_block_type\": \"whiteConcreate\",\"ceiling_block_type\": \"whiteConcreate\",\"layout_type\": \"rectangle\",}");
+
+    }
     return houseBuilder.build(minecraftConfig);
-//        BlockPos topPos = world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos);
-//        Direction offset = Direction.NORTH;
-//
-//        for (int y = 1; y <= 15; y++) {
-//            offset = offset.rotateYClockwise();
-//            world.setBlockState(topPos.up(y).offset(offset), Blocks.STONE.getDefaultState(), 3);
-//        }
-//
-//        return true;
   }
 }

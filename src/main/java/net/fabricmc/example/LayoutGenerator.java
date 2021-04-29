@@ -22,8 +22,8 @@ public class LayoutGenerator {
       len = 20;
       wid = 10;
     } else if (layoutType.equals("square")) {
-      len = 10;
-      wid = 10;
+      len = 5;
+      wid = 5;
     } else {
       throw new IllegalStateException("Illegal type of layout");
     }

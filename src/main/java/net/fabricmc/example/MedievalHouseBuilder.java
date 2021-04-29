@@ -11,4 +11,11 @@ public class MedievalHouseBuilder extends HouseBuilder{
         this.ceilingGenerator = ceilingGenerator;
         this.configFile = configFile;
     }
+
+    MedievalHouseBuilder(String configFile) {
+        this.layoutGenerator = new LayoutGenerator(configFile);
+        this.externalWallGenerator = new ExternalWallGenerator(configFile);
+        this.ceilingGenerator = new CeilingGenerator(configFile);
+        this.configFile = configFile;
+    }
 }
