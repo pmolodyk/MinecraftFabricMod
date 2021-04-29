@@ -1,0 +1,20 @@
+net/fabricmc/example/mixin/ExampleMixin.java
+ net.fabricmc.example.mixin.ExampleMixin
+net/fabricmc/example/HouseBuilder.java
+ net.fabricmc.example.HouseBuilder
+net/fabricmc/example/BuildingFeature.java
+ net.fabricmc.example.BuildingFeature
+net/fabricmc/example/ModernHouseBuilder.java
+ net.fabricmc.example.ModernHouseBuilder
+net/fabricmc/example/MedievalHouseBuilder.java
+ net.fabricmc.example.MedievalHouseBuilder
+net/fabricmc/example/LayoutGenerator.java
+ net.fabricmc.example.LayoutGenerator
+net/fabricmc/example/MinecraftConfig.java
+ net.fabricmc.example.MinecraftConfig
+net/fabricmc/example/ExternalWallGenerator.java
+ net.fabricmc.example.ExternalWallGenerator
+net/fabricmc/example/BuildingsMod.java
+ net.fabricmc.example.BuildingsMod
+net/fabricmc/example/CeilingGenerator.java
+ net.fabricmc.example.CeilingGenerator

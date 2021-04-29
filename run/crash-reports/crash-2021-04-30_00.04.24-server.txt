@@ -1,0 +1,180 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 30.04.2021, 00:04
+Description: Feature placement
+
+org.json.JSONException: A JSONObject text must begin with '{' at 0 [character 1 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:507)
+	at org.json.JSONObject.<init>(JSONObject.java:222)
+	at org.json.JSONObject.<init>(JSONObject.java:406)
+	at net.fabricmc.example.LayoutGenerator.generate(LayoutGenerator.java:17)
+	at net.fabricmc.example.HouseBuilder.build(HouseBuilder.java:23)
+	at net.fabricmc.example.BuildingFeature.generate(BuildingFeature.java:31)
+	at net.fabricmc.example.BuildingFeature.generate(BuildingFeature.java:15)
+	at net.minecraft.world.gen.feature.ConfiguredFeature.generate(ConfiguredFeature.java:55)
+	at net.minecraft.world.gen.feature.DecoratedFeature.method_30384(DecoratedFeature.java:23)
+	at java.base/java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:411)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at net.minecraft.world.gen.feature.DecoratedFeature.generate(DecoratedFeature.java:22)
+	at net.minecraft.world.gen.feature.DecoratedFeature.generate(DecoratedFeature.java:14)
+	at net.minecraft.world.gen.feature.ConfiguredFeature.generate(ConfiguredFeature.java:55)
+	at net.minecraft.world.biome.Biome.generateFeatureStep(Biome.java:373)
+	at net.minecraft.world.gen.chunk.ChunkGenerator.generateFeatures(ChunkGenerator.java:220)
+	at net.minecraft.world.chunk.ChunkStatus.method_12151(ChunkStatus.java:89)
+	at net.minecraft.world.chunk.ChunkStatus.runGenerationTask(ChunkStatus.java:219)
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_17225(ThreadedAnvilChunkStorage.java:568)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_17224(ThreadedAnvilChunkStorage.java:562)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1146)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+	at net.minecraft.server.world.ChunkTaskPrioritySystem.method_17634(ChunkTaskPrioritySystem.java:58)
+	at net.minecraft.util.thread.TaskExecutor.runNext(TaskExecutor.java:94)
+	at net.minecraft.util.thread.TaskExecutor.runWhile(TaskExecutor.java:137)
+	at net.minecraft.util.thread.TaskExecutor.run(TaskExecutor.java:105)
+	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1429)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:507)
+	at org.json.JSONObject.<init>(JSONObject.java:222)
+	at org.json.JSONObject.<init>(JSONObject.java:406)
+	at net.fabricmc.example.LayoutGenerator.generate(LayoutGenerator.java:17)
+	at net.fabricmc.example.HouseBuilder.build(HouseBuilder.java:23)
+	at net.fabricmc.example.BuildingFeature.generate(BuildingFeature.java:31)
+	at net.fabricmc.example.BuildingFeature.generate(BuildingFeature.java:15)
+	at net.minecraft.world.gen.feature.ConfiguredFeature.generate(ConfiguredFeature.java:55)
+	at net.minecraft.world.gen.feature.DecoratedFeature.method_30384(DecoratedFeature.java:23)
+	at java.base/java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:411)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at net.minecraft.world.gen.feature.DecoratedFeature.generate(DecoratedFeature.java:22)
+	at net.minecraft.world.gen.feature.DecoratedFeature.generate(DecoratedFeature.java:14)
+	at net.minecraft.world.gen.feature.ConfiguredFeature.generate(ConfiguredFeature.java:55)
+
+-- Feature --
+Details:
+	Id: minecraft:decorated
+	Config: < DecoratedFeatureConfig [tutorial:stone_spiral | [minecraft:chance net.minecraft.world.gen.decorator.ChanceDecoratorConfig@2ae3399c]] >
+	Description: < DecoratedFeature [minecraft:decorated] >
+Stacktrace:
+	at net.minecraft.world.biome.Biome.generateFeatureStep(Biome.java:373)
+
+-- Generation --
+Details:
+	CenterX: 12
+	CenterZ: -14
+	Seed: 2257916004064511615
+	Biome: net.minecraft.world.biome.Biome@534a5e70
+Stacktrace:
+	at net.minecraft.world.gen.chunk.ChunkGenerator.generateFeatures(ChunkGenerator.java:220)
+	at net.minecraft.world.chunk.ChunkStatus.method_12151(ChunkStatus.java:89)
+	at net.minecraft.world.chunk.ChunkStatus.runGenerationTask(ChunkStatus.java:219)
+
+-- Chunk to be generated --
+Details:
+	Location: 12,-14
+	Position hash: -60129542132
+	Generator: net.minecraft.world.gen.chunk.NoiseChunkGenerator@937d53c
+Stacktrace:
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_17225(ThreadedAnvilChunkStorage.java:568)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_17224(ThreadedAnvilChunkStorage.java:562)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1146)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+	at net.minecraft.server.world.ChunkTaskPrioritySystem.method_17634(ChunkTaskPrioritySystem.java:58)
+	at net.minecraft.util.thread.TaskExecutor.runNext(TaskExecutor.java:94)
+	at net.minecraft.util.thread.TaskExecutor.runWhile(TaskExecutor.java:137)
+	at net.minecraft.util.thread.TaskExecutor.run(TaskExecutor.java:105)
+
+-- Affected level --
+Details:
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 529
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (200,64,-216), Chunk: (at 8,4,8 in 12,-14; contains blocks 192,0,-224 to 207,255,-209), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 0 game time, 0 day time
+	Level name: New World
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Known server brands: fabric
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.createWorlds(MinecraftServer.java:383)
+	at net.minecraft.server.MinecraftServer.loadWorld(MinecraftServer.java:332)
+	at net.minecraft.server.integrated.IntegratedServer.setupServer(IntegratedServer.java:68)
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:254)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.3
+	Minecraft Version ID: 1.16.3
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 15.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 373993464 bytes (356 MB) / 1077936128 bytes (1028 MB) up to 8522825728 bytes (8128 MB)
+	CPUs: 12
+	JVM Flags: 0 total; 
+	Fabric Mods: 
+		fabric: Fabric API 0.29.3+1.16
+		fabric-api-base: Fabric API Base 0.2.0+ab87788d3a
+		fabric-biome-api-v1: Fabric Biome API (v1) 3.1.0+2e23b97c3a
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.4+6a2618f53a
+		fabric-command-api-v1: Fabric Command API (v1) 1.0.9+6a2618f53a
+		fabric-commands-v0: Fabric Commands (v0) 0.2.1+cbe9176f3a
+		fabric-containers-v0: Fabric Containers (v0) 0.1.9+a03e98793a
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.2.0+e77439c73a
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.2+b7f9825d3a
+		fabric-dimensions-v1: fabric-dimensions-v1 2.0.1+9a6c75813a
+		fabric-entity-events-v1: Fabric Entity Events (v1) 1.0.2+8004b36d3a
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.1+6a2618f53a
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.0+6a2618f53a
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.5+cbe9176f3a
+		fabric-item-api-v1: Fabric Item API (v1) 1.2.0+6a2618f53a
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.2.2+cbe9176f3a
+		fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.1+730711c63a
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.0+6a2618f53a
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 1.2.0+ffb68a873a
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.0.1+6a2618f53a
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.2+6a2618f53a
+		fabric-models-v0: Fabric Models (v0) 0.2.0+cbe9176f3a
+		fabric-networking-api-v1: Fabric Networking API (v1) 1.0.0+4358fbc63a
+		fabric-networking-blockentity-v0: Fabric Networking Block Entity (v0) 0.2.7+a03e98793a
+		fabric-networking-v0: Fabric Networking (v0) 0.3.1+2a4333d33a
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 1.9.2+6a2618f53a
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.7.1+6a2618f53a
+		fabric-particles-v1: Fabric Particles (v1) 0.2.3+cbe9176f3a
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.7.3+be155ae23a
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.4.0+cbe9176f3a
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.4.3+6a2618f53a
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 2.2.0+6a2618f53a
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.1.4+6a2618f53a
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.12+6a2618f53a
+		fabric-rendering-v0: Fabric Rendering (v0) 1.1.1+6a2618f53a
+		fabric-rendering-v1: Fabric Rendering (v1) 1.5.0+c26373133a
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.4.1+0d4d7e343a
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.1.0+6a2618f53a
+		fabric-structure-api-v1: Fabric Structure API (v1) 1.1.3+cbe9176f3a
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 1.1.0+e77439c73a
+		fabric-textures-v0: Fabric Textures (v0) 1.0.5+6a2618f53a
+		fabric-tool-attribute-api-v1: Fabric Tool Attribute API (v1) 1.2.5+6a2618f53a
+		fabricloader: Fabric Loader 0.11.0
+		java: Java HotSpot(TM) 64-Bit Server VM 15
+		minecraft: Minecraft 1.16.3
+		modid: Example Mod 1.0.0
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, Fabric Mods
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fabric'
