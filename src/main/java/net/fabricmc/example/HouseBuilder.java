@@ -7,10 +7,17 @@ public abstract class HouseBuilder {
     String configFile;
 
     HouseBuilder() {
-        this.layoutGenerator = new LayoutGenerator();
-        this.externalWallGenerator = new ExternalWallGenerator();
-        this.ceilingGenerator = new CeilingGenerator();
+        this.layoutGenerator = new LayoutGenerator("{}");
+        this.externalWallGenerator = new ExternalWallGenerator("{}");
+        this.ceilingGenerator = new CeilingGenerator("{}");
         this.configFile = null;
+    }
+
+    HouseBuilder(String configFile) {
+        this.layoutGenerator = new LayoutGenerator("{}");
+        this.externalWallGenerator = new ExternalWallGenerator(configFile);
+        this.ceilingGenerator = new CeilingGenerator(configFile);
+        this.configFile = configFile;
     }
     boolean build(MinecraftConfig minecraftConfig) {
         int[][] layout = layoutGenerator.generate(minecraftConfig);

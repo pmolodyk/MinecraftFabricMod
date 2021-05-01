@@ -16,19 +16,27 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 
 public class BuildingsMod implements ModInitializer {
-	private static final Feature<DefaultFeatureConfig> BUILDING_FEATURE = new BuildingFeature(DefaultFeatureConfig.CODEC);
-	public static final ConfiguredFeature<?, ?> BUILDING_CONFIGURED = BUILDING_FEATURE.configure(FeatureConfig.DEFAULT).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(60)));
+
+	private static final Feature<DefaultFeatureConfig> BUILDING_FEATURE = new BuildingFeature(
+			DefaultFeatureConfig.CODEC);
+	public static final ConfiguredFeature<?, ?> BUILDING_CONFIGURED = BUILDING_FEATURE
+			.configure(FeatureConfig.DEFAULT)
+			.decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(60)));
 
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		Registry.register(Registry.FEATURE, new Identifier("buildings_mod", "buildings"), BUILDING_FEATURE);
-		RegistryKey<ConfiguredFeature<?, ?>> buildingFeature = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
-				new Identifier("buildings_mod", "buildings"));
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, buildingFeature.getValue(), BUILDING_CONFIGURED);
-		BiomeModifications.addFeature(BiomeSelectors.all(), GenerationStep.Feature.SURFACE_STRUCTURES, buildingFeature);
+		Registry
+				.register(Registry.FEATURE, new Identifier("buildings_mod", "buildings"), BUILDING_FEATURE);
+		RegistryKey<ConfiguredFeature<?, ?>> buildingFeature = RegistryKey
+				.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+						new Identifier("buildings_mod", "buildings"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, buildingFeature.getValue(),
+				BUILDING_CONFIGURED);
+		BiomeModifications.addFeature(BiomeSelectors.all(), GenerationStep.Feature.SURFACE_STRUCTURES,
+				buildingFeature);
 		System.out.println("Mod init");
 	}
 }
