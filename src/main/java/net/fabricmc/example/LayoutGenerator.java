@@ -41,8 +41,8 @@ public class LayoutGenerator {
             }
             world.setBlockState(groundLevel.north(4), Blocks.OAK_STAIRS.rotate(Blocks.OAK_STAIRS.getDefaultState(), BlockRotation.CLOCKWISE_90), 3);
         } else if (type == "modern") {
-            len = ThreadLocalRandom.current().nextInt(5, 15 + 1);
-            wid = ThreadLocalRandom.current().nextInt(5, 15 + 1);
+            len = ThreadLocalRandom.current().nextInt(5, 14 + 1);
+            wid = ThreadLocalRandom.current().nextInt(5, 14 + 1);
 
             ArrayList<Block> blockList = new ArrayList<>();
             blockList.add(Blocks.WHITE_CONCRETE);

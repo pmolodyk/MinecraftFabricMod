@@ -53,13 +53,6 @@ public class CeilingGenerator {
             }
         } else if (type == "modern") {
             ArrayList<Block> glassList = new ArrayList<>();
-            glassList.add(Blocks.WHITE_STAINED_GLASS);
-            glassList.add(Blocks.BLUE_STAINED_GLASS);
-            glassList.add(Blocks.BLACK_STAINED_GLASS);
-            glassList.add(Blocks.CYAN_STAINED_GLASS);
-            glassList.add(Blocks.GREEN_STAINED_GLASS);
-            glassList.add(Blocks.LIME_STAINED_GLASS);
-            glassList.add(Blocks.LIGHT_BLUE_STAINED_GLASS);
 
             Random rand = new Random();
 
@@ -67,16 +60,30 @@ public class CeilingGenerator {
             int wid = layout[0].length;
             int n = (int) Math.ceil(Math.sqrt(2 * len + 0.25) - 0.5);
 
-            int i_pos = -1;
+            if (len % 2 == 0) { // cold color scheme
+                glassList.add(Blocks.WHITE_STAINED_GLASS);
+                glassList.add(Blocks.BLUE_STAINED_GLASS);
+                glassList.add(Blocks.CYAN_STAINED_GLASS);
+                glassList.add(Blocks.GREEN_STAINED_GLASS);
+                glassList.add(Blocks.LIME_STAINED_GLASS);
+                glassList.add(Blocks.LIGHT_BLUE_STAINED_GLASS);
+            } else {
+                glassList.add(Blocks.WHITE_STAINED_GLASS);
+                glassList.add(Blocks.YELLOW_STAINED_GLASS);
+                glassList.add(Blocks.BROWN_STAINED_GLASS);
+                glassList.add(Blocks.ORANGE_STAINED_GLASS);
+                glassList.add(Blocks.RED_STAINED_GLASS);
+            }
+
+            int i_pos = 0;
             for (int s = 0; s < n; ++s) {
                 int color = rand.nextInt(glassList.size());
-                int lim = i_pos + s + 2;
+                int lim = i_pos + s + 1;
                 for (int i = i_pos; i < lim; ++i, ++i_pos) {
                     for (int j = 0; j < wid; ++j) {
                         world.setBlockState(groundLevel.north(j).east(i).up(wallHeight + s), glassList.get(color).getDefaultState(), 3);
                     }
                 }
-                --i_pos;
             }
         } else {
             throw new IllegalArgumentException("Unknown ceiling type");
