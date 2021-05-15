@@ -27,7 +27,7 @@ public class CeilingGenerator {
         BlockPos groundLevel = mConfig.pos;
 
         if (type == "medieval") {
-            // stripped oak (whatever)
+            // stripped oak
             for (int i = 0; i < 2; ++i) {
                 for (int j = 0; j < 5; ++j) {
                      world.setBlockState(groundLevel.east(i * 18).north(j * 2).up(-abs(j - 2) + 7), Blocks.OAK_PLANKS.getDefaultState(), 3);
@@ -49,6 +49,21 @@ public class CeilingGenerator {
             for (int i = 0; i < 19; ++i) {
                 for (int j = 0; j < 3; ++j) {
                     world.setBlockState(groundLevel.east(i).north(5 + j * 2).up(7 - j), Blocks.OAK_STAIRS.rotate(Blocks.OAK_STAIRS.getDefaultState(), BlockRotation.CLOCKWISE_180), 3);
+                }
+            }
+            // chimney
+            int fire_i = 5;
+            int fire_j = 6;
+            int fire_k = 8;
+            world.setBlockState(groundLevel.east(fire_i).up(fire_k).north(fire_j), Blocks.CAMPFIRE.getDefaultState(), 3);
+            for (int i = -1; i < 2; ++i) {
+                for (int j = -1; j < 2; ++j) {
+                    for (int k = -2; k < 2; ++k) {
+                        if (i == 0 && j == 0) {
+                            continue;
+                        }
+                        world.setBlockState(groundLevel.east(fire_i + i).up(fire_k + k).north(fire_j + j), Blocks.COBBLESTONE.getDefaultState(), 3);
+                    }
                 }
             }
         } else if (type == "modern") {

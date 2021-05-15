@@ -7,6 +7,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.StructureWorldAccess;
 
 import java.util.ArrayList;
@@ -68,13 +69,13 @@ public class ExternalWallGenerator {
             // west-east oak logs
             for (int i = 1; i < len - 1; ++i) {
                 for (int j = 0; j < 2; ++j) {
-                    world.setBlockState(groundLevel.east(i).north(j * (wid - 1)).up(wallHeight - 1), Blocks.STRIPPED_OAK_WOOD.getDefaultState(), 3);
+                    world.setBlockState(groundLevel.east(i).north(j * (wid - 1)).up(wallHeight - 1), Blocks.STRIPPED_OAK_WOOD.getDefaultState().with(EnumProperty.of("axis", Direction.Axis.class), Direction.Axis.X), 3);
                 }
             }
             // south-north oak logs
             for (int i = 0; i < 2; ++i) {
                 for (int j = 1; j < wid - 1; ++j) {
-                    world.setBlockState(groundLevel.east(i * (len - 1)).north(j).up(wallHeight - 1), Blocks.STRIPPED_OAK_WOOD.getDefaultState(), 3);
+                    world.setBlockState(groundLevel.east(i * (len - 1)).north(j).up(wallHeight - 1), Blocks.STRIPPED_OAK_WOOD.getDefaultState().with(EnumProperty.of("axis", Direction.Axis.class), Direction.Axis.Z), 3);
                 }
             }
             // side windows, south
@@ -145,7 +146,8 @@ public class ExternalWallGenerator {
                             if (k == 1 || k == wallHeight + s - 1) {
                                 world.setBlockState(groundLevel.east(i).north(j * (wid - 1)).up(k), concreteList.get(color).getDefaultState(), 3);
                             } else {
-                                world.setBlockState(groundLevel.east(i).north(j * (wid - 1)).up(k), glassList.get(color).getDefaultState(), 3);
+                                world.setBlockState(groundLevel.east(i).north(j * (wid - 1)).up(k), glassList.get(color).getDefaultState().with(BooleanProperty.of("west"), true)
+                                        .with(BooleanProperty.of("east"), true), 3);
                             }
                         }
                     }
@@ -159,7 +161,8 @@ public class ExternalWallGenerator {
                     if (k == 1 || k == wallHeight - 1 || j == 0 || j == wid - 1) {
                         world.setBlockState(groundLevel.north(j).up(k), concreteList.get(color).getDefaultState(), 3);
                     } else {
-                        world.setBlockState(groundLevel.north(j).up(k), glassList.get(color).getDefaultState(), 3);
+                        world.setBlockState(groundLevel.north(j).up(k), glassList.get(color).getDefaultState().with(BooleanProperty.of("north"), true)
+                                .with(BooleanProperty.of("south"), true), 3);
                     }
                 }
             }
@@ -180,7 +183,8 @@ public class ExternalWallGenerator {
                         world.setBlockState(groundLevel.north(j).up(k).east(len - 1), concreteList.get(color).getDefaultState(), 3);
 
                     } else {
-                        world.setBlockState(groundLevel.north(j).up(k).east(len - 1), glassList.get(color).getDefaultState(), 3);
+                        world.setBlockState(groundLevel.north(j).up(k).east(len - 1), glassList.get(color).getDefaultState().with(BooleanProperty.of("north"), true)
+                                .with(BooleanProperty.of("south"), true), 3);
                     }
                 }
             }
