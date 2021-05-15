@@ -58,8 +58,8 @@ public class CeilingGenerator {
             world.setBlockState(groundLevel.east(fire_i).up(fire_k).north(fire_j), Blocks.CAMPFIRE.getDefaultState(), 3);
             for (int i = -1; i < 2; ++i) {
                 for (int j = -1; j < 2; ++j) {
-                    for (int k = -2; k < 2; ++k) {
-                        if (i == 0 && j == 0) {
+                    for (int k = -fire_k; k < 2; ++k) {
+                        if (Math.abs(i - j) != 1) {
                             continue;
                         }
                         world.setBlockState(groundLevel.east(fire_i + i).up(fire_k + k).north(fire_j + j), Blocks.COBBLESTONE.getDefaultState(), 3);
