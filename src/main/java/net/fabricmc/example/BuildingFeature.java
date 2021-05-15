@@ -27,12 +27,9 @@ public class BuildingFeature extends Feature<DefaultFeatureConfig> {
         MinecraftConfig minecraftConfig = new MinecraftConfig(world, generator, random,
             world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos), config);
         if (((int)((Math.random() * (3 - 1)) + 1)) == 1) {
-            houseBuilder = new MedievalHouseBuilder(
-                "{\"wall_block_type\": \"cobblestone\",\"ceiling_block_type\": \"cobblestone\",\"layout_type\": \"square\",}");
+            houseBuilder = new MedievalHouseBuilder();
         } else {
-            houseBuilder = new ModernHouseBuilder(
-                "{\"wall_block_type\": \"whiteConcreate\",\"ceiling_block_type\": \"whiteConcreate\",\"layout_type\": \"rectangle\",}");
-
+            houseBuilder = new ModernHouseBuilder();
         }
         return houseBuilder.build(minecraftConfig);
     }
