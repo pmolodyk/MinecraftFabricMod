@@ -2,6 +2,8 @@ package net.fabricmc.example;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.enums.StairShape;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Heightmap;
@@ -25,6 +27,8 @@ public class CeilingGenerator {
     boolean generate(MinecraftConfig mConfig, int[][] layout, int wallHeight) {
         StructureWorldAccess world = mConfig.world;
         BlockPos groundLevel = mConfig.pos;
+        int len = layout.length;
+        int wid = layout[0].length;
 
         if (type == "medieval") {
             // stripped oak
@@ -71,8 +75,6 @@ public class CeilingGenerator {
 
             Random rand = new Random();
 
-            int len = layout.length;
-            int wid = layout[0].length;
             int n = (int) Math.ceil(Math.sqrt(2 * len + 0.25) - 0.5);
 
             if (len % 2 == 0) { // cold color scheme
@@ -100,6 +102,56 @@ public class CeilingGenerator {
                     }
                 }
             }
+        } else if (type == "asian") {
+            int n = 9;
+            int delta = 10;
+
+            // edges
+            for (int i = delta + 1; i < len - delta - 1; ++i) {
+                for (int j = delta + 1; j < len - delta - 1; ++j) {
+                    world.setBlockState(groundLevel.north(j).east(i).up(wallHeight), Blocks.NETHER_BRICK_SLAB.getDefaultState(), 3);
+                }
+            }
+            for (int i = delta + 2; i < len - 2 - delta; ++i) {
+                for (int j = delta + 2; j < wid - 2 - delta; ++j) {
+                    world.setBlockState(groundLevel.east(i).north(j).up(wallHeight), Blocks.NETHER_BRICKS.getDefaultState(), 3);
+                }
+            }
+            for (int i = 1; i < n - 1; ++i) {
+                world.setBlockState(groundLevel.east(delta + i).north(delta).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_180), 3);
+                world.setBlockState(groundLevel.east(delta + i).north(delta + n - 1).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState(), 3);
+            }
+            for (int j = 1; j < n - 1; ++j) {
+                world.setBlockState(groundLevel.east(delta).north(delta + j).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.COUNTERCLOCKWISE_90), 3);
+                world.setBlockState(groundLevel.east(delta + n - 1).north(delta + j).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_90), 3);
+            }
+            world.setBlockState(groundLevel.east(delta).north(delta).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.COUNTERCLOCKWISE_90).with(EnumProperty.of("shape", StairShape.class), StairShape.INNER_LEFT), 3);
+            world.setBlockState(groundLevel.east(delta + n - 1).north(delta).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_180).with(EnumProperty.of("shape", StairShape.class), StairShape.INNER_LEFT), 3);
+            world.setBlockState(groundLevel.east(delta).north(delta + n - 1).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState().with(EnumProperty.of("shape", StairShape.class), StairShape.INNER_LEFT), 3);
+            world.setBlockState(groundLevel.east(delta + n - 1).north(delta + n - 1).up(wallHeight), Blocks.NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_90).with(EnumProperty.of("shape", StairShape.class), StairShape.INNER_LEFT), 3);
+
+            // lanterns
+            world.setBlockState(groundLevel.east(delta).north(delta).up(wallHeight - 1), Blocks.LANTERN.getDefaultState(), 3);
+            world.setBlockState(groundLevel.east(delta + n - 1).north(delta).up(wallHeight - 1), Blocks.LANTERN.getDefaultState(), 3);
+            world.setBlockState(groundLevel.east(delta).north(delta + n - 1).up(wallHeight - 1), Blocks.LANTERN.getDefaultState(), 3);
+            world.setBlockState(groundLevel.east(delta + n - 1).north(delta + n - 1).up(wallHeight - 1), Blocks.LANTERN.getDefaultState(), 3);
+
+            // hat
+            world.setBlockState(groundLevel.east(len / 2 - 1).north(wid / 2).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_90), 3);
+            world.setBlockState(groundLevel.east(len / 2 + 1).north(wid / 2).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.COUNTERCLOCKWISE_90), 3);
+            world.setBlockState(groundLevel.east(len / 2).north(wid / 2 + 1).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_180), 3);
+            world.setBlockState(groundLevel.east(len / 2).north(wid / 2 - 1).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState(), 3);
+
+            world.setBlockState(groundLevel.east(len / 2 + 1).north(wid / 2 - 1).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState().with(EnumProperty.of("shape", StairShape.class), StairShape.OUTER_LEFT), 3);
+            world.setBlockState(groundLevel.east(len / 2 - 1).north(wid / 2 - 1).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_90).with(EnumProperty.of("shape", StairShape.class), StairShape.OUTER_LEFT), 3);
+            world.setBlockState(groundLevel.east(len / 2 + 1).north(wid / 2 + 1).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.COUNTERCLOCKWISE_90).with(EnumProperty.of("shape", StairShape.class), StairShape.OUTER_LEFT), 3);
+            world.setBlockState(groundLevel.east(len / 2 - 1).north(wid / 2 + 1).up(wallHeight + 1), Blocks.RED_NETHER_BRICK_STAIRS.getDefaultState().rotate(BlockRotation.CLOCKWISE_180).with(EnumProperty.of("shape", StairShape.class), StairShape.OUTER_LEFT), 3);
+
+            world.setBlockState(groundLevel.east(len / 2).north(wid / 2).up(wallHeight + 1), Blocks.RED_NETHER_BRICKS.getDefaultState(), 3);
+
+            world.setBlockState(groundLevel.east(len / 2).north(wid / 2).up(wallHeight + 2), Blocks.RED_NETHER_BRICK_WALL.getDefaultState(), 3);
+            world.setBlockState(groundLevel.east(len / 2).north(wid / 2).up(wallHeight + 3), Blocks.RED_NETHER_BRICK_WALL.getDefaultState(), 3);
+
         } else {
             throw new IllegalArgumentException("Unknown ceiling type");
         }

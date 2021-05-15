@@ -9,6 +9,7 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.StructureWorldAccess;
+import net.minecraft.block.enums.WallShape;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -21,6 +22,7 @@ public class ExternalWallGenerator {
     int len = 0;
     int wid = 0;
     int door_j = 0;
+    private StructureWorldAccess world;
 
     public ExternalWallGenerator(String type) {
         this.type = type;
@@ -33,9 +35,73 @@ public class ExternalWallGenerator {
         return j == door_j && (k == 2 || k == 1);
     }
 
+    private void generateLevel(BlockPos start, int a, int n) { // a -- len/wid, n -- level number
+        int height = 6 - n;
+        for (int k = 0; k < height; ++k) {
+            world.setBlockState(start.up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("east", WallShape.class), WallShape.TALL)
+                    .with(EnumProperty.of("north", WallShape.class), WallShape.TALL), 3);
+            world.setBlockState(start.east(a - 1).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("west", WallShape.class), WallShape.TALL)
+                    .with(EnumProperty.of("north", WallShape.class), WallShape.TALL), 3);
+            world.setBlockState(start.north(a - 1).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("east", WallShape.class), WallShape.TALL)
+                    .with(EnumProperty.of("south", WallShape.class), WallShape.TALL), 3);
+            world.setBlockState(start.north(a - 1).east(a - 1).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("west", WallShape.class), WallShape.TALL)
+                    .with(EnumProperty.of("south", WallShape.class), WallShape.TALL), 3);
+        }
+        int door_a = (int) (0.25 * a + 0.75);
+        for (int i = 1; i < a - 1; ++i) {
+            for (int j = 0; j < 2; ++j) {
+                for (int k = 0; k < height; ++k) {
+                    if (k == door_a && i >= door_a && i <= a - 1 - door_a) {
+                        world.setBlockState(start.east(i).north(j * (a - 1)).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("east", WallShape.class), WallShape.TALL)
+                                .with(EnumProperty.of("west", WallShape.class), WallShape.TALL), 3);
+                    } else if (k >= door_a || i < door_a || i > a - 1 - door_a) {
+                        world.setBlockState(start.east(i).north(j * (a - 1)).up(k), Blocks.END_STONE_BRICK_WALL.getDefaultState().with(EnumProperty.of("east", WallShape.class), WallShape.TALL)
+                                .with(EnumProperty.of("west", WallShape.class), WallShape.TALL), 3);
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < 2; ++i) {
+            for (int j = 1; j < a - 1; ++j) {
+                for (int k = 0; k < height; ++k) {
+                    if (k == door_a && j >= door_a && j <= a - 1 - door_a) {
+                        world.setBlockState(start.east(i * (a - 1)).north(j).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("north", WallShape.class), WallShape.TALL)
+                                .with(EnumProperty.of("south", WallShape.class), WallShape.TALL), 3);
+                    } else if (k >= door_a || j < door_a || j > a - 1 - door_a) {
+                        world.setBlockState(start.east(i * (a - 1)).north(j).up(k), Blocks.END_STONE_BRICK_WALL.getDefaultState().with(EnumProperty.of("north", WallShape.class), WallShape.TALL)
+                                .with(EnumProperty.of("south", WallShape.class), WallShape.TALL), 3);
+                    }
+                }
+            }
+        }
+        if (a == 5) {
+            for (int k = 0; k < door_a; ++k) {
+                for (int s = 0; s < 2; ++s) {
+                    world.setBlockState(start.east(a / 2).north(s * (a - 1)).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("east", WallShape.class), WallShape.TALL)
+                            .with(EnumProperty.of("west", WallShape.class), WallShape.TALL), 3);
+                    world.setBlockState(start.east(s * (a - 1)).north(a / 2).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("north", WallShape.class), WallShape.TALL)
+                            .with(EnumProperty.of("south", WallShape.class), WallShape.TALL), 3);
+                }
+            }
+        } else if (a > 5) {
+            for (int k = 0; k < door_a; ++k) {
+                for (int j = 0; j < 2; ++j) {
+                    world.setBlockState(start.east(door_a).north(j * (a - 1)).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("west", WallShape.class), WallShape.TALL), 3);
+                    world.setBlockState(start.east(a - 1 - door_a).north(j * (a - 1)).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("east", WallShape.class), WallShape.TALL), 3);
+                }
+            }
+            for (int k = 0; k < door_a; ++k) {
+                for (int i = 0; i < 2; ++i) {
+                    world.setBlockState(start.east(i * (a - 1)).north(door_a).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("south", WallShape.class), WallShape.TALL), 3);
+                    world.setBlockState(start.east(i * (a - 1)).north(a - 1 - door_a).up(k), Blocks.RED_NETHER_BRICK_WALL.getDefaultState().with(EnumProperty.of("north", WallShape.class), WallShape.TALL), 3);
+                }
+            }
+        }
+    }
+
     int generate(MinecraftConfig mConfig, int[][] layout) {
 
-        StructureWorldAccess world = mConfig.world;
+        world = mConfig.world;
         BlockPos groundLevel = mConfig.pos;
         int wallHeight = 5;
         int len = layout.length;
@@ -188,6 +254,11 @@ public class ExternalWallGenerator {
                     }
                 }
             }
+        } else if (type == "asian") {
+            generateLevel(groundLevel.east(8).north(8).up(4), 13, 0);
+            generateLevel(groundLevel.east(10).north(10).up(12), 9, 1);
+            generateLevel(groundLevel.east(12).north(12).up(19), 5, 2);
+            wallHeight = 23;
         } else {
             throw new IllegalArgumentException("Illegal walls type");
         }

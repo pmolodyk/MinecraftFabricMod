@@ -26,10 +26,13 @@ public class BuildingFeature extends Feature<DefaultFeatureConfig> {
         DefaultFeatureConfig config) {
         MinecraftConfig minecraftConfig = new MinecraftConfig(world, generator, random,
             world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos), config);
-        if (((int)((Math.random() * (3 - 1)) + 1)) == 1) {
+        int type = ((int)((Math.random() * (4 - 1)) + 1));
+        if (type == 1) {
             houseBuilder = new MedievalHouseBuilder();
-        } else {
+        } else if (type == 2) {
             houseBuilder = new ModernHouseBuilder();
+        } else {
+            houseBuilder = new AsianHouseBuilder();
         }
         return houseBuilder.build(minecraftConfig);
     }
