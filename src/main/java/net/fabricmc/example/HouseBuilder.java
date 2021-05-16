@@ -1,5 +1,7 @@
 package net.fabricmc.example;
 
+import net.minecraft.util.Pair;
+
 public abstract class HouseBuilder {
     LayoutGenerator layoutGenerator;
     ExternalWallGenerator externalWallGenerator;
@@ -12,14 +14,14 @@ public abstract class HouseBuilder {
     }
 
     boolean build(MinecraftConfig minecraftConfig) {
-        int[][] layout = layoutGenerator.generate(minecraftConfig);
+        Pair<Integer, Integer> layout = layoutGenerator.generate(minecraftConfig);
         if (layout == null) {
             throw new NullPointerException();
         }
-        int wallHeight = externalWallGenerator.generate(minecraftConfig, layout);
+        int wallHeight = externalWallGenerator.generate(minecraftConfig, layout.getLeft(), layout.getRight());
         if (wallHeight == -1) {
             throw new IllegalStateException();
         }
-        return ceilingGenerator.generate(minecraftConfig, layout, wallHeight);
+        return ceilingGenerator.generate(minecraftConfig, layout.getLeft(), layout.getRight(), wallHeight);
     }
 }

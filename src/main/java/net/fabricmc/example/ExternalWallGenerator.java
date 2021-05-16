@@ -95,13 +95,11 @@ public class ExternalWallGenerator {
         }
     }
 
-    int generate(MinecraftConfig mConfig, int[][] layout) {
+    int generate(MinecraftConfig mConfig, int len, int wid) {
 
         world = mConfig.world;
         BlockPos groundLevel = mConfig.pos;
         int wallHeight = 5;
-        int len = layout.length;
-        int wid = layout[0].length;
 
         switch (type) {
             case "medieval":
@@ -166,8 +164,6 @@ public class ExternalWallGenerator {
 
                 Random rand = new Random();
 
-                len = layout.length;
-                wid = layout[0].length;
                 wallHeight = ThreadLocalRandom.current().nextInt(2, 5 + 1);
                 int n = (int) Math.ceil(Math.sqrt(2 * len + 0.25) - 0.5);
 

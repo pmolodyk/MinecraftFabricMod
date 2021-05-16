@@ -19,12 +19,10 @@ public class CeilingGenerator {
         this.type = type;
     }
 
-    boolean generate(MinecraftConfig mConfig, int[][] layout, int wallHeight) {
+    boolean generate(MinecraftConfig mConfig, int len, int wid, int wallHeight) {
 
         StructureWorldAccess world = mConfig.world;
         BlockPos groundLevel = mConfig.pos;
-        int len = layout.length;
-        int wid = layout[0].length;
 
         switch (type) {
             case "medieval":

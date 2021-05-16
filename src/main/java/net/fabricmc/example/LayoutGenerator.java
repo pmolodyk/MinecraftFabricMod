@@ -4,6 +4,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.enums.StairShape;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.Pair;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.StructureWorldAccess;
 import java.util.concurrent.ThreadLocalRandom;
@@ -73,7 +74,7 @@ public class LayoutGenerator {
         }
     }
 
-    int[][] generate(MinecraftConfig mConfig) {
+    Pair<Integer, Integer> generate(MinecraftConfig mConfig) {
         int len;
         int wid;
         world = mConfig.world;
@@ -134,6 +135,6 @@ public class LayoutGenerator {
             default:
                 throw new IllegalArgumentException("Unknown type of houses: " + type);
         }
-        return new int[len][wid];
+        return new Pair<Integer, Integer>(len, wid);
     }
 }
