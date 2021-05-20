@@ -21,7 +21,7 @@ public class BuildingsMod implements ModInitializer {
 			DefaultFeatureConfig.CODEC);
 	public static final ConfiguredFeature<?, ?> BUILDING_CONFIGURED = BUILDING_FEATURE
 			.configure(FeatureConfig.DEFAULT)
-			.decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(60)));
+			.decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(80)));
 
 	@Override
 	public void onInitialize() {
