@@ -22,7 +22,7 @@ public class BuildingFeature extends Feature<DefaultFeatureConfig> {
         DefaultFeatureConfig config) {
         MinecraftConfig minecraftConfig = new MinecraftConfig(world, generator, random,
             world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos), config);
-        int type = ((int)((random.nextInt() * (4 - 1)) + 1));
+        int type = ((int)((Math.random() * (4 - 1)) + 1));
         HouseBuilder houseBuilder;
         if (type == 1) {
             houseBuilder = new MedievalHouseBuilder();
